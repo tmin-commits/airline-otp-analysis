@@ -52,6 +52,43 @@ python3 otp_analysis.py
 
 Requires `daily.csv` in the same folder (see Data Source above).
 
+## Part 2: Passenger Load Factor & Industry Growth
+
+While Part 1 looked at reliability, this section looks at demand — how
+full flights are, and how the overall Indian aviation industry has grown
+(or crashed) over the past decade.
+
+### Key Findings
+
+- **SpiceJet has the highest load factor of any major carrier** despite
+  having the weakest on-time performance from Part 1 — its planes are
+  consistently the fullest, but least likely to run on schedule.
+- **The entire industry collapsed in 2020**, with monthly domestic
+  passengers falling from ~13 million to near zero during COVID-19
+  lockdowns, followed by a second dip in early 2021 during the second wave.
+- **Recovery has been strong** — by 2026, monthly domestic passenger
+  traffic exceeds pre-COVID 2020 levels by roughly 15-20%.
+
+### Charts
+
+![Load Factor Trend](load_factor_trend.png)
+![Industry Growth Trend](industry_growth_trend.png)
+
+### Methodology
+
+1. Filtered to scheduled domestic flights only (excludes charters).
+2. Built monthly load factor trends for the five major carriers.
+3. Used DGCA's industry-wide "Total Domestic" figures to track overall
+   passenger volume, 2015-2026.
+
+### Running It
+
+```bash
+python3 traffic_analysis.py
+```
+
+Requires `carrier.csv` in the same folder.
+
 ## Credits
 
 Data compiled by [Vonter/india-aviation-traffic](https://github.com/Vonter/india-aviation-traffic)
